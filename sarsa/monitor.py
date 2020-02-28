@@ -43,6 +43,7 @@ def interact(env, agent, num_episodes=20000, window=100):
             state = next_state
             if done:
                 # save final sampled reward
+                agent.endofepisode()
                 samp_rewards.append(samp_reward)
                 break
         if (i_episode >= 100):
